@@ -1,0 +1,47 @@
+doctype html
+html
+    head
+        title Welcome to picChat | The Wierdest chatting platform
+        
+        link(rel='stylesheet', href='../../css/style.css')
+        link(rel='stylesheet', href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap")
+         
+        body
+
+        div(class='container')
+            h1(class='center') picChat
+            p(class='center') The wierdest chatting platform ever !
+            hr
+        
+
+            div(class='nav')
+                h4 Welcome back, #{uname}
+                br
+                div(class='moveLeft')    
+                    a(href="/logout") Logout
+                    span  | 
+                    a(href="/editProfile") Edit Profile 
+                    span  | 
+                    a(href="/editProfile") Settings
+                br
+
+            center
+                
+                h2 Profile - @#{Person[0].uname}
+                
+                
+                table
+                    tr
+                        td Id: 
+                        td #{Person[0].id}
+                    tr 
+                        td Username: 
+                        td #{Person[0].uname}
+                    tr 
+                        td E-mail: 
+                        td #{Person[0].email}
+
+                    tr
+                        td
+                        td
+                            a(href='/',class="form-control btn-warning") Go Back

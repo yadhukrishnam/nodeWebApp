@@ -1,0 +1,47 @@
+doctype html
+html
+    head
+        title Register Now
+        link(rel='stylesheet', href='css/style.css')
+    body
+        div(class='container')
+            h1(class='center') Welcome to picChat.com 
+            p(class='center') The wierdest chatting platform ever !
+            hr 
+            
+            br
+            
+            form(action='/register', method='POST')
+                center
+                    h1 Sign Up
+                    br
+                    br
+
+                    table(class='col-md-4')
+                        tr
+                            td
+                                input(name='uname', type='text',placeholder='Username',class="form-control")
+                        tr
+                            td
+                                input(name='email', type='email',placeholder='E-mail',class="form-control")
+
+                        tr
+                            td
+                                input(name='passwd', type='password',placeholder='Password',class="form-control")
+                        tr
+                            td
+                                input(name='passwdConf', type='password',placeholder='Confirm password',class="form-control")
+                        tr
+
+                            td
+                                input(name='submit', value='Register', type='submit',class="form-control btn-success")
+                        tr
+
+                            td
+                                a(href='/',class="form-control btn-warning") Go Back
+                        if (msg)
+                            tr
+                                td
+                                    span(style='color:red') #{msg}
+                                
+                    

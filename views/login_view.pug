@@ -1,0 +1,46 @@
+doctype html
+html
+    head
+        title Welcome to picChat
+        link(rel='stylesheet', href='css/style.css')
+        meta(name='viewport',content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap")
+    body
+        div(class='container')
+            h1(class='center') picChat 
+            p(class='center') The wierdest chatting platform ever !
+            hr 
+            
+            br
+            
+            
+
+            form(method='POST' action='/login')
+                center
+                    h2(class='center') Login
+                    br
+                    br
+                    br
+                    table(class='col-md-4')
+                        tr
+                            td
+                                input(type='text', placeholder='Enter Username', name='uname',class="form-control")
+                        tr
+                            td
+                                input(type='password', placeholder='Enter Password', name='passwd',class="form-control")
+                    
+                        tr
+                            
+                            td 
+                                input(type='submit', value="Login",class="form-control btn-success")        
+                        
+                        if (error) 
+                            tr
+                                
+                                td 
+                                    span(style="color:red") #{error}
+                        tr
+                            
+                            td
+                                a(href='/register') Register Now
+                                    

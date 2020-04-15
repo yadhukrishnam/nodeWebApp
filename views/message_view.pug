@@ -1,0 +1,52 @@
+doctype html
+html
+    head
+        title Welcome to picChat | The Wierdest chatting platform
+        
+        link(rel='stylesheet', href='../../css/style.css')
+        link(rel='stylesheet', href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap")
+         
+        body
+
+        div(class='container')
+            h1(class='center') picChat
+            p(class='center') The wierdest chatting platform ever !
+            hr
+        
+
+            div(class='nav')
+                h4 Welcome back, #{uname}
+                br
+                div(class='moveLeft')    
+                    a(href="/logout") Logout
+                    span  | 
+                    a(href="/editProfile") Edit Profile 
+                    span  | 
+                    a(href="/editProfile") Settings
+                br
+
+            center
+                
+                h2 #{pairName}'s status
+                
+                if (messages)
+                    ul
+                    for message in messages
+                        li 
+                            a(href=message.msg)
+                                img(src=message.msg, width="250") 
+                            br
+                        
+                            if (message.sender == UserId)
+                                a(href='/delete'+message.msg,class='btn btn-danger form-control') Delete
+                                br
+
+                    li         
+                        a(href='/dashboard',class='btn btn-warning form-control') Go Back
+                        br
+                                
+                else
+                    span(style='color:red') No Messages
+
+                if (error) 
+                    span(style='color:red') #{error}

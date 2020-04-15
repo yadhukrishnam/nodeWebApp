@@ -1,0 +1,59 @@
+doctype html
+html
+    head
+        title Welcome to picChat | The Wierdest chatting platform
+        
+        link(rel='stylesheet', href='css/style.css')
+        link(rel='stylesheet', href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap")
+         
+        body
+
+        div(class='container')
+            h1(class='center') picChat
+            p(class='center') The wierdest chatting platform ever !
+            hr
+        
+
+            div(class='nav')
+                h4 Welcome back, #{uname}
+                br
+                div(class='moveLeft')    
+                    a(href="/logout") Logout
+                    span  | 
+                    a(href="/editProfile") Edit Profile 
+                    span  | 
+                    a(href="/editProfile") Settings
+                br
+
+            center
+                
+                h2 Edit Profile
+                
+                br
+                br
+                form(action='/saveProfile',method='post')
+                    table(class='col-md-6')
+                            tr
+                                td Username
+                                td 
+                                    input(type='text',required,name='uname',value=person.uname, class='form-control')
+
+                            tr
+                                td E-mail   
+                                td 
+                                    input(type='text',required,name='email',value=person.email, class='form-control')
+                            tr
+                                td 
+                                td 
+                                    input(type='submit',value='Update Profile', class='form-control btn btn-success')
+                            tr
+                                td 
+                                td 
+                                    a(href='/',class="form-control btn-warning") Go Back
+                            if (message)
+                                tr
+                                    td(colspan='2')
+                                        span(style='color:red') #{message}
+                                    
+                                
+                

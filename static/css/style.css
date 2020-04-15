@@ -1,0 +1,91 @@
+@import 'bootstrap.css';
+
+body {
+    padding-top:20px;
+   background :  #563d7c;
+   color: #FFF;
+   font-weight: 700;
+   font-family: 'Nunito', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.friends tr {
+    border-bottom: 1px solid #FFF;
+}
+.center {
+    text-align: center;
+}
+.logo {
+    color: navy;
+    text-shadow: orangered 0px 0px 10px;
+    font-style: italic;
+    text-decoration: underline;
+}
+td, th{
+    
+    padding: 10px;
+}
+.moveLeft {
+    float:right;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+table, img {
+    border-collapse: collapse;
+    z-index: ;
+    background:  #db6f67;
+    color: #000;
+    box-shadow: #db6f67 0px 0px 50px 50px;
+}
+h2 {
+    z-index: 99;
+    position: relative;
+}
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+.left{
+    
+    border: 1px solid #000;
+    background: tomato;
+    padding: 20px;
+    box-shadow: #000 0px 0px 20px 0px;
+}
+hr {
+    border: 1px solid #FFF;
+}
+
+tr {
+    text-align: center ;
+    padding: 20px
+}
+
+
+a:hover {
+    color: #000;
+    text-shadow: #000 0px 0px 10px;
+    text-decoration: none !important;
+}
+.back{
+    background: purple;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: #000 0px 0px 5px 0px;
+}
+.back:hover{ color: #FFF }
+ul {
+    
+}
+li {
+    width: 33.33%;
+    list-style: none;
+}
+ a {
+    margin-top: 20px;
+    z-index: 999;
+    position: relative;
+}
+li img {
+    border: 5px solid #FFF
+}

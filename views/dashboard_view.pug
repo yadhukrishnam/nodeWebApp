@@ -1,0 +1,69 @@
+doctype html
+html
+    head
+        title Welcome to picChat | The Wierdest chatting platform
+        
+        link(rel='stylesheet', href='css/style.css')
+        link(rel='stylesheet', href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap")
+         
+        body
+
+        div(class='container')
+            h1(class='center') picChat
+            p(class='center') The wierdest chatting platform ever !
+            hr
+        
+
+            div(class='nav')
+                h4 Welcome back, #{uname}
+                br
+                div(class='moveLeft')    
+                    a(href="/logout") Logout
+                    span  | 
+                    a(href="/editProfile") Edit Profile 
+                    span  | 
+                    a(href="/editProfile") Settings
+                br
+
+            center
+                
+                h2 Friend Zone
+                
+                
+                if (err) 
+                    span(style='color:red', value=err)
+                table(class='friends')
+                    tr 
+                    if (data) 
+                        for person in data
+                            tr
+                                td 
+                                    span(class='btn btn-white') #{person.uname}
+                                    
+                                td
+                                    a(href='/chat/@' + person.uname, class='btn btn-warning')  Status
+
+                                td
+                                    a(href='/viewPerson/@' + person.uname, class='btn btn-warning')  Profile
+                            
+                                    
+                    else
+                        tr
+                            td No Registered Users
+                br 
+                br 
+                br 
+                br 
+                br 
+                br 
+                div(class='col-md-4')
+                    h2 Post Status
+
+                    form(action="",,method="POST",enctype="multipart/form-data")
+                        input(type="file",name="filetoupload", class='form-control')
+                        br
+                        input(type="submit",value="Send message", class='btn-success form-control')
+
+                br 
+                br 
+        
